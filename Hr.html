@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home Remedies</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); 
+* {
+    margin: 0;
+    padding: 0;
+    font-family: poppins;
+  }
+  .header{
+    padding: 15px 70px;
+    box-shadow: 0.05px 0 10px rgb(0,0,0,0.4) ;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: white;
+}
+.nav-bar{
+    
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#logo{
+    width: 50px;
+}
+.logo-sure-cure{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.logo-sure-cure h1{
+    font-size: 1.8rem;
+}
+.nav-links{
+    display: flex;
+    gap: 20px;
+}
+.nav-links a{
+text-decoration: none;
+color: black;
+
+}
+.login-signup-div{
+    display: flex;
+    gap: 5px;
+}
+.login-signup-div button{
+    width: 100px;
+    height: 40px;
+    font-size: 1.25rem;
+    border: 0;
+    border-radius: 15px;
+    color: white;
+    background-color: #025fff;
+}
+
+#input{
+    text-align: center;
+    width: 25vw;
+    align-items: center;
+    margin: auto;
+    /* border-radius: 1rem; */
+    border: none;
+    box-shadow: 0 1px 0 rgb(4, 4, 4);
+} 
+.inputhead {
+    margin: auto;
+    padding-top: 2vh;
+}
+  
+
+  .main-container {
+    display: flex;
+    height: auto;
+    padding-top:100px;
+  }
+
+  .left {
+    margin-left:20px;
+    width: 30%;
+    border-right: 1px solid #ccc;
+    padding: 15px;
+  }
+
+  .right{
+    width: 70%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .right input {
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+  }
+
+  #box1{
+    border: 1px solid rgb(173, 172, 172);
+    padding: 15px;
+    border-radius: 5px;
+   height: auto;
+   margin: auto;
+   width: 65vw;  
+  }
+#box2{
+  border: 1px solid rgb(173, 172, 172);
+  padding: 15px;
+  border-radius: 5px;
+  height: auto;
+  margin: auto;
+  width: 65vw;
+}
+
+       
+
+        .footer {
+            background-color: #26263e;
+            color: #ffffff;
+            padding: 60px 70px;
+            display: flex;
+            justify-content: space-between;
+            font-family: poppins,sans-serif;
+
+        }
+
+        .foot-left,
+        .foot-right {
+            flex: 1;
+            min-width: 280px;
+            margin-bottom: 20px;
+        }
+
+        .foot-l-head {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .foot-l-head img {
+            margin-right: 10px;
+        }
+
+        .foot-l-content {
+            font-size: 14px;
+            margin-bottom: 20px;
+            color: #ccc;
+        }
+
+        .foot-l-links i {
+            font-size: 20px;
+            margin-right: 15px;
+            color: #ffffff;
+            transition: color 0.3s ease;
+
+        }
+
+        .foot-l-links i:hover {
+            color: #00bcd4;
+            transform: scale(1.2);
+        }
+
+        .foot-right {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            flex-wrap: wrap;
+
+        }
+
+        .foot-right div div a {
+            text-decoration: none;
+            color: rgb(212, 202, 202);
+        }
+
+
+
+        .foot-right div div:first-child {
+            font-weight: bold;
+            margin: 10px;
+            font-size: 16px;
+            color: #ffffff;
+        }
+
+        .foot-right div div:not(:first-child) {
+            margin: 8px;
+            font-size: 14px;
+            color: #ccc;
+
+            transition: color 0.3s ease;
+        }
+
+        .foot-right div div:not(:first-child):hover {
+            color: #00bcd4;
+        }
+
+        #logout-btn{
+    width: 100px;
+    height: 35px;
+    font-size: 1rem;
+    border: 0;
+    border-radius: 10px;
+    color: white;
+    background-color: #021a44;
+  }
+
+  
+  @media(max-width:1000px){
+    .nav-bar{
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    .nav-links{
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .login-signup-div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .main-container{  margin-top: 220px;
+       
+    }
+  }
+  @media(max-width:1120px){
+    .hf{
+        display: none;
+
+    }
+    .hero-content-div{
+        align-items: center;
+        margin-top: 20px;
+    }
+  
+    
+  }
+  
+
+  @media(max-width:970px){
+    .card-div{
+        justify-content: center;
+    }
+  }
+  @media(max-width:531px){
+    .footer{
+        flex-direction: column;
+    }
+  }
+@media(max-width:809px){
+  .main-container{
+    flex-direction: column;
+    align-items: center;
+  }
+}
+  </style>
+  <link rel="icon" href="two.jpg" type="img/png">
+</head>
+
+<body>
+
+  <header class="header">
+    <nav class="nav-bar" >
+
+        <div class="logo-sure-cure">
+            <div id="logo"><img src="Logo.png" width="100%" alt="logo"></div>
+
+<h1 id="sure-cure">Sure Cure</h1>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="appointment.html">Find Doctors</a>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About</a>
+
+
+        </div>
+        <div class="login-signup-div" id="auth-buttons">
+          <button id="login-btn" style="width: 0; border: 0;"></button>
+          <button id="signup-btn" style="width: 0; border: 0;"></button>
+        </div>
+        
+       
+        <div id="user-profile" style="display: none;">
+          <p>Welcome, <span id="user-name"></span>!</p>
+          <!-- <div id="view-profile-btn"><i class="fa-solid fa-circle-user"></i></div> -->
+          
+          
+        </div>
+    </nav>
+</header>
+
+  <div class="main-container">
+    <div class="left">
+      <h2> Interesting Facts About Home Remedies</h2>
+      <ul id="ulleft">
+        <li><b>Honey</b> is a natural antibiotic and has been used to heal wounds since ancient times.</li>
+        <li><b>Ginger</b> helps reduce nausea, muscle pain, and inflammation.</li>
+        <li><b>Lemon water</b> can detoxify your body and improve digestion.</li>
+        <li><b>Turmeric</b> has strong anti-inflammatory and antioxidant effects.</li>
+        <li><b>Aloe Vera</b> soothes burns and moisturizes the skin naturally.</li>
+        <li><b>Warm milk with turmeric</b> boosts immunity and improves sleep.</li>
+        <li><b>Almond oil</b> helps reduce dark circles and moisturizes skin.</li>
+        <li><b>Mint leaves</b> ease headaches and stomach aches.</li>
+        <li><b>Green tea</b> promotes weight loss and healthy skin with antioxidants.</li>
+        <li><b>Chamomile tea</b> relieves stress and improves sleep quality.</li>
+        <li><b>Carrots</b> support eye health and boost immunity.</li>
+    </ul>
+    
+    </div>
+
+
+    <div class="right">
+      <div class="inputhead">
+        <input type="text" placeholder=" Looking for a cure? Start typing!" id="input" />
+        <img src="one.jpg" width="24px" style="position: relative; top: 5px;">
+      </div>
+      <h2 id="headname">Get Well Soon</h2>
+      <div id="box1">
+        <h3>Instructions</h3>
+        <p><!-- Instruction content goes here --></p>
+      </div>
+
+      <div id="box2">
+        <h3>Ingredients</h3>
+        <p><!-- Ingredient content goes here --></p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="foot-left">
+        <div class="foot-l-head"><img width="50" src="logo.png" alt="">Sure Cure</div>
+        <div class="foot-l-content">Copyright &copy; 2025 developed by Web Crafters all rights reserved.</div>
+        <div class="foot-l-links">
+            <a target="_blank" href="https://www.google.com"><i class="fa-brands fa-linkedin"></i></a>
+            <a target="_blank" href=""> <i class="fa-brands fa-x-twitter"></i></a>
+            <a target="_blank" href=""> <i class="fa-brands fa-github"></i></a>
+            <a target="_blank" href=""> <i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </div>
+    <div class="foot-right">
+        <div class="foot-r-quick">
+            <div>Quick Links:</div>
+            <div><a href="index.html">Home</a></div>
+            <div><a href="about.html">About Us</a></div>
+            <div><a href="appointment.html">Find A Doctor</a></div>
+
+        </div>
+        <div class="foot-r-want-to">
+            <div>I want to:</div>
+            <div><a href="Hr.html">Home Remedy</a></div>
+            <div><a href="medicine.html">Online Medicine</a></div>
+            <div><a href="check.html">Medicine Verification</a></div>
+
+        </div>
+        <div class="foot-r-quick">
+            <div>Support</div>
+            <div><a href="organ.html">Organ Donation</a></div>
+            <div><a href="contact.html">Contact Us</a></div>
+            <div><a href="#">+91-1234-5678-90</a></div>
+        </div>
+    </div>
+
+</footer>
+
+</body>
+<script>
+  let remedies = [];
+
+function parseCSVLine(line) {
+  const result = [];
+  let current = '';
+  let inQuotes = false;
+
+  for (let i = 0; i < line.length; i++) {
+    const char = line[i];
+
+    if (char === '"' && line[i + 1] === '"') { 
+      current += '"';
+      i++;
+    } else if (char === '"') {
+      inQuotes = !inQuotes;
+    } else if (char === ',' && !inQuotes) {
+      result.push(current.trim());
+      current = '';
+    } else {
+      current += char;
+    }
+  }
+  result.push(current.trim());
+  return result;
+}
+
+// Fetch and parse the CSV
+fetch('Hr.csv')
+  .then(response => response.text())
+  .then(csvData => {
+    const rows = csvData.trim().split(/\r?\n/); 
+    remedies = rows.slice(1).map(row => {
+      const values = parseCSVLine(row);
+      return {
+        name: (values[0] || '').replace(/"/g, '').trim(),
+        ingredients: (values[1] || '').replace(/"/g, '').replace(/, /g, ' ; ').trim(),
+        instructions: (values[2] || '').replace(/"/g, '').trim()
+      };
+    });
+    console.log('✅ Remedies loaded properly!');
+  })
+  .catch(error => {
+    console.error('Error loading CSV:', error);
+  });
+
+  // displaying the values
+function searchRemedy(searchName) {
+  
+
+  const cleanedName = searchName.trim().toLowerCase();
+  const remedy = remedies.find(r => r.name.toLowerCase().includes(cleanedName));
+
+  const headname = document.getElementById('headname');
+  const boxes1 = document.querySelector('#box1');
+  const boxes2 = document.querySelector('#box2');
+  if (remedy) {
+    headname.textContent = "Home remedy of "+remedy.name;
+    boxes1.querySelector('p').textContent = remedy.instructions;
+    boxes2.querySelector('p').textContent = remedy.ingredients;
+  } else {
+    headname.textContent = `No remedy found for "${searchName}"`;
+    boxes1.querySelector('p').textContent = '';
+    boxes2.querySelector('p').textContent = '';
+  }
+}
+
+
+const inputBox = document.getElementById('input');
+
+inputBox.addEventListener('keypress', function (e) {
+  if (e.key === 'Enter') {
+    searchRemedy(inputBox.value);
+  }
+});
+
+const searchIcon = document.querySelector('.inputhead img');
+searchIcon.addEventListener('click', () => {
+  searchRemedy(inputBox.value);
+});
+
+//login
+
+document.addEventListener("DOMContentLoaded", () => {
+  const user = JSON.parse(localStorage.getItem("user"));
+  if (user && user.name) {
+    showProfile(user.name);
+  }
+
+  // Logout functionality
+  const logoutBtn = document.getElementById("logout-btn");
+  if (logoutBtn) {
+    logoutBtn.addEventListener("click", () => {
+      localStorage.removeItem("user");
+
+      const authButtons = document.getElementById("auth-buttons");
+      const userProfile = document.getElementById("user-profile");
+
+      if (authButtons && userProfile) {
+        authButtons.style.display = "flex";
+        userProfile.style.display = "none";
+      }
+
+      alert("You have been logged out.");
+    });
+  }
+
+  function showProfile(name) {
+    const authButtons = document.getElementById("auth-buttons");
+    const userProfile = document.getElementById("user-profile");
+    const userNameDisplay = document.getElementById("user-name");
+
+    if (authButtons && userProfile && userNameDisplay) {
+      authButtons.style.display = "none";
+      userProfile.style.display = "flex";
+      userNameDisplay.textContent = name;
+
+      // Optional styling
+      userProfile.style.gap = "20px";
+      userProfile.style.alignItems = "center";
+    }
+
+    // Dynamically add logout button if not already present
+    if (!document.getElementById("logout-btn")) {
+      const logoutBtn = document.createElement("button");
+      logoutBtn.id = "logout-btn";
+      logoutBtn.textContent = "Logout";
+      logoutBtn.style.marginLeft = "10px";
+      logoutBtn.onclick = () => {
+        localStorage.removeItem("user");
+        authButtons.style.display = "flex";
+        userProfile.style.display = "none";
+        alert("You have been logged out.");
+      };
+      userProfile.appendChild(logoutBtn);
+    }
+  }
+});
+
+
+
+</script>
+
+</html>

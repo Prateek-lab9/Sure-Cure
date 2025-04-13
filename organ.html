@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organ Donation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+font-family: poppins;
+        }
+
+        .full {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 120px;
+        }
+
+        .header {
+            padding: 15px 70px;
+            box-shadow: 0.05px 0 10px rgb(0, 0, 0, 0.4);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background-color: white;
+        }
+
+        .nav-bar {
+
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #logo {
+            width: 50px;
+        }
+
+        .logo-sure-cure {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .logo-sure-cure h1 {
+            font-size: 1.8rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: black;
+
+        }
+
+        .login-signup-div {
+            display: flex;
+            gap: 5px;
+        }
+
+        .login-signup-div button {
+            width: 100px;
+            height: 40px;
+            font-size: 1.25rem;
+            border: 0;
+            border-radius: 15px;
+            color: white;
+            background-color: #025fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .side {
+            width: 30%;
+            padding: 20px;
+            background-color: #f1f7f6;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .moto,
+        .notto {
+            margin-bottom: 20px;
+        }
+
+        h3 {
+
+            font-weight: 700;
+            font-size: 2rem;
+        }
+
+        p {
+            line-height: 1.7;
+        }
+
+        .main {
+            width: 60%;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+      
+        .img-organ img{
+           width:400px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+
+        }
+
+        .inp {
+            width: 90%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid black;
+            border-radius: 4px;
+        }
+
+        .checkbox_org label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        #btn {
+            background-color: #1d3fff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #btn:hover {
+            background-color: #3e1cac;
+        }
+
+        .imp_ins {
+            background-color: #f1f7f6;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .imp_ins p {
+            margin-bottom: 15px;
+        }
+
+        #location {
+            height: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .full {
+                flex-direction: column;
+                align-items: center;
+                padding: 20px;
+            }
+
+            .side {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .main {
+                width: 100%;
+            }
+        }
+
+        #downloadBtn {
+            display: inline;
+            height: 5vh;
+            background-color: #051eff;
+            margin-left: 46vw;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            margin-top: 1vh;
+            padding: 1vw 5vw;
+            font-family: poppins;
+        }
+
+        #downloadBtn:hover {
+            background-color: rgb(28, 17, 130);
+
+        }
+        .footer {
+            margin-top: 30px;
+            background-color: #26263e;
+            color: #ffffff;
+            padding: 60px 70px;
+            display: flex;
+            justify-content: space-between;
+            font-family: poppins, sans-serif;
+
+        }
+
+        .foot-left,
+        .foot-right {
+            flex: 1;
+            min-width: 280px;
+            margin-bottom: 20px;
+        }
+
+        .foot-l-head {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .foot-l-head img {
+            margin-right: 10px;
+        }
+
+        .foot-l-content {
+            font-size: 14px;
+            margin-bottom: 20px;
+            color: #ccc;
+        }
+
+        .foot-l-links i {
+            font-size: 20px;
+            margin-right: 15px;
+            color: #ffffff;
+            transition: color 0.3s ease;
+
+        }
+
+        .foot-l-links i:hover {
+            color: #00bcd4;
+            transform: scale(1.2);
+        }
+
+        .foot-right {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            flex-wrap: wrap;
+
+        }
+
+        .foot-right div div a {
+            text-decoration: none;
+            color: rgb(212, 202, 202);
+        }
+
+
+
+        .foot-right div div:first-child {
+            font-weight: bold;
+            margin: 10px;
+            font-size: 16px;
+            color: #ffffff;
+        }
+
+        .foot-right div div:not(:first-child) {
+            margin: 8px;
+            font-size: 14px;
+            color: #ccc;
+
+            transition: color 0.3s ease;
+        }
+
+        .foot-right div div:not(:first-child):hover {
+            color: #00bcd4;
+        }
+        #logout-btn{
+    width: 100px;
+    height: 35px;
+    font-size: 1rem;
+    border: 0;
+    border-radius: 10px;
+    color: white;
+    background-color: #021a44;
+  }
+
+  
+  @media(max-width:1000px){
+    .nav-bar{
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    .nav-links{
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .login-signup-div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .full{
+        margin-top: 320px;
+    }
+  }
+  @media(max-width:1120px){
+    .hf{
+        display: none;
+
+    }
+    .hero-content-div{
+        align-items: center;
+        margin-top: 20px;
+    }
+  
+    
+  }
+  
+
+  @media(max-width:970px){
+    .card-div{
+        justify-content: center;
+    }
+  }
+  @media(max-width:531px){
+    .footer{
+        flex-direction: column;
+    }
+  }
+
+  /* @media(max-width:785px){
+    .full{
+        flex-direction: column;
+    }
+  } */
+
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav-bar">
+
+            <div class="logo-sure-cure">
+                <div id="logo"><img src="Logo.png" width="100%" alt="logo"></div>
+
+                <h1 id="sure-cure"><a href="index.html" style="text-decoration: none;color:black;">Sure Cure</a></h1>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="appointment.html">Find Doctors</a>
+                <a href="contact.html">Contact</a>
+                <a href="about.html">About</a>
+
+
+            </div>
+            <div class="login-signup-div" id="auth-buttons">
+                <button id="login-btn" style="width: 0; border: 0;"></button>
+                <button id="signup-btn" style="width: 0; border: 0;"></button>
+              </div>
+              
+             
+              <div id="user-profile" style="display: none;">
+                <p>Welcome, <span id="user-name"></span>!</p>
+                <!-- <div id="view-profile-btn"><i class="fa-solid fa-circle-user"></i></div> -->
+                
+                
+              </div>
+        </nav>
+    </header>
+    <div class="full">
+        <div class="side">
+            <div class="moto">
+                <h3>Our Motto</h3>
+                <p>Our website is dedicated to making organ donation a seamless process for everyone. We provide a
+                    simple and digital way to create a pledge form for organ donation. By filling out our user-friendly
+                    form, you can officially declare your wish to contribute to saving lives.<br><br>
+                    After completing the pledge, users are encouraged to submit their form to NGOs or the organ
+                    transplant department of hospitals, along with a family witness to make it legally binding.<br><br>
+                    In addition, we support users by generating an official PDF pledge certificate that can be
+                    downloaded and submitted offline for registration. Our goal is to increase awareness and encourage
+                    more individuals to become organ donors, helping save countless lives.</p>
+            </div>
+            <div class="notto">
+                <h3>NOTTO</h3>
+                <p>The National Organ and Tissue Transplant Organization (NOTTO) is a government agency under the
+                    Ministry of Health and Family Welfare, dedicated to promoting organ donation across India. It serves
+                    as the central coordinating body for organ transplantation, ensuring the safe and ethical
+                    distribution of organs to those in need. NOTTO's mission is to increase awareness about organ
+                    donation, maintain a transparent registry, and facilitate the smooth exchange of organs across the
+                    country.
+            </div>
+         <div class="img-organ">
+            <img src="organ.jpg" alt="">
+         </div>
+        </div>
+        <div class="main">
+            <div class="pledge_form">
+                <h2>Organ Donation Pledge Form</h2>
+                <p>I, the undersigned, hereby pledge to donate my organs and/or tissues after my death to help save
+                    lives and improve health for others. I make this decision voluntarily and with full understanding of
+                    its importance.</p>
+                <label>Full Name:
+                    <input type="text" placeholder="Enter your full name" class="inp">
+                </label>
+                <label>Date of Birth:
+                    <input type="date" class="inp">
+                </label>
+                <label>Gender:
+                    <select class="inp">
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Other</option>
+                    </select>
+                </label>
+                <label>Address:
+                    <input type="text" placeholder="Enter your full address with pincode" class="inp">
+                </label>
+                <label>Contact Number:
+                    <input type="tel" placeholder="Phone number" class="inp">
+                </label>
+                <label>Email:
+                    <input type="email" placeholder="Your email address" class="inp">
+                </label>
+                <label>Aadhaar Number:
+                    <input type="text" placeholder="XXXX-XXXX-XXXX" class="inp">
+                </label>
+                <p>Organs/Tissues to Donate:</p>
+                <div class="checkbox_org">
+                    <label><input type="checkbox">Eyes</label>
+                    <label><input type="checkbox">Kidneys</label>
+                    <label><input type="checkbox">Heart</label>
+                    <label><input type="checkbox">Liver</label>
+                    <label><input type="checkbox">Lungs</label>
+                    <label><input type="checkbox">Pancreas</label>
+                    <label><input type="checkbox">Skin</label>
+                    <label><input type="checkbox">Small Intestine</label>
+                </div>
+            </div>
+            <div class="imp_ins">
+                <h3>Important Instructions:</h3>
+                <p><b>1.Witness Requirement:</b> You must bring a family member as a witness who will sign this form
+                    alongside you. The witness will confirm that this pledge is voluntary and understood by you.</p>
+                <p><b>2.Submit this pledge form at an authorized location:</b> To make this pledge official, submit your
+                    signed form to any of the following:
+                <ul>
+                    <li>Organ Donation Registration Camps</li>
+                    <li>NGOs working in the field of organ donation (e.g., MOHAN Foundation)</li>
+                    <li>The Organ & Transplant Department at a hospital</li>
+                </ul>
+                </p>
+                <p>3.<b>Required Documents:</b> Along with this form, bring your valid ID proof (<b>e.g.,</b> Aadhaar,
+                    Voter ID) for verification.</p>
+                <p>This form is not legally binding unless submitted to the relevant authorities. The official
+                    registration with NOTTO or your state organ donation registry must be done at one of the authorized
+                    locations mentioned above.</p>
+            </div>
+        </div>
+    </div>
+    <button id="downloadBtn">Download Pledge Form as PDF</button>
+
+    </div>
+
+    <footer class="footer">
+        <div class="foot-left">
+            <div class="foot-l-head"><img width="50" src="logo.png" alt="">Sure Cure</div>
+            <div class="foot-l-content">Copyright &copy; 2025 developed by Web Crafters all rights reserved.</div>
+            <div class="foot-l-links">
+                <a target="_blank" href="https://www.google.com"><i class="fa-brands fa-linkedin"></i></a>
+                <a target="_blank" href=""> <i class="fa-brands fa-x-twitter"></i></a>
+                <a target="_blank" href=""> <i class="fa-brands fa-github"></i></a>
+                <a target="_blank" href=""> <i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="foot-right">
+            <div class="foot-r-quick">
+                <div>Quick Links:</div>
+                <div><a href="index.html">Home</a></div>
+                <div><a href="about.html">About Us</a></div>
+                <div><a href="appointment.html">Find A Doctor</a></div>
+
+            </div>
+            <div class="foot-r-want-to">
+                <div>I want to:</div>
+                <div><a href="Hr.html">Home Remedy</a></div>
+                <div><a href="medicine.html">Online Medicine</a></div>
+                <div><a href="check.html">Medicine Verification</a></div>
+
+            </div>
+            <div class="foot-r-quick">
+                <div>Support</div>
+                <div><a href="organ.html">Organ Donation</a></div>
+                <div><a href="contact.html">Contact Us</a></div>
+                <div><a href="#">+91-1234-5678-90</a></div>
+            </div>
+        </div>
+
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <script>
+        document.getElementById("downloadBtn").addEventListener("click", function () {
+    const { jsPDF } = window.jspdf;
+    const mainDiv = document.querySelector(".main");
+
+    html2canvas(mainDiv, { scale: 2 }).then(canvas => {
+        const imgData = canvas.toDataURL("image/png");
+
+        const pdf = new jsPDF("p", "mm", "a4");
+        const pdfWidth = 190;
+        const pdfHeight = 297;
+
+        const imgWidth = pdfWidth;
+        const imgHeight = (canvas.height * imgWidth) / canvas.width;
+
+        let heightLeft = imgHeight;
+        let position = 0;
+
+        
+        pdf.addImage(imgData, "PNG", 0, position, imgWidth, imgHeight);
+        heightLeft -= pdfHeight;
+
+        
+        while (heightLeft > 0) {
+            position -= pdfHeight;
+            pdf.addPage();
+            pdf.addImage(imgData, "PNG", 0, position, imgWidth, imgHeight);
+            heightLeft -= pdfHeight;
+        }
+
+        pdf.save("Organ_Donation_Pledge.pdf");
+    });
+});
+
+//login
+
+document.addEventListener("DOMContentLoaded", () => {
+  const user = JSON.parse(localStorage.getItem("user"));
+  if (user && user.name) {
+    showProfile(user.name);
+  }
+
+  // Logout functionality
+  const logoutBtn = document.getElementById("logout-btn");
+  if (logoutBtn) {
+    logoutBtn.addEventListener("click", () => {
+      localStorage.removeItem("user");
+
+      const authButtons = document.getElementById("auth-buttons");
+      const userProfile = document.getElementById("user-profile");
+
+      if (authButtons && userProfile) {
+        authButtons.style.display = "flex";
+        userProfile.style.display = "none";
+      }
+
+      alert("You have been logged out.");
+    });
+  }
+
+  function showProfile(name) {
+    const authButtons = document.getElementById("auth-buttons");
+    const userProfile = document.getElementById("user-profile");
+    const userNameDisplay = document.getElementById("user-name");
+
+    if (authButtons && userProfile && userNameDisplay) {
+      authButtons.style.display = "none";
+      userProfile.style.display = "flex";
+      userNameDisplay.textContent = name;
+
+      // Optional styling
+      userProfile.style.gap = "20px";
+      userProfile.style.alignItems = "center";
+    }
+
+    // Dynamically add logout button if not already present
+    if (!document.getElementById("logout-btn")) {
+      const logoutBtn = document.createElement("button");
+      logoutBtn.id = "logout-btn";
+      logoutBtn.textContent = "Logout";
+      logoutBtn.style.marginLeft = "10px";
+      logoutBtn.onclick = () => {
+        localStorage.removeItem("user");
+        authButtons.style.display = "flex";
+        userProfile.style.display = "none";
+        alert("You have been logged out.");
+      };
+      userProfile.appendChild(logoutBtn);
+    }
+  }
+});
+    </script>
+
+</body>
+
+</html>

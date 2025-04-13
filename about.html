@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="index.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-bar" >
+
+            <div class="logo-sure-cure">
+                <div id="logo"><img src="Logo.png" width="100%" alt="logo"></div>
+
+<h1 id="sure-cure">Sure Cure</h1>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#our-doctor">
+                    Find Doctors</a>
+                <a href="">Contact</a>
+                <a href="about.html">About</a>
+
+
+            </div>
+            <div class="login-signup-div" id="auth-buttons">
+                <button id="login-btn" style="width: 0; border: 0;"></button>
+                <button id="signup-btn" style="width: 0; border: 0;"></button>
+              </div>
+              
+             
+              <div id="user-profile" style="display: none;">
+                <p>Welcome, <span id="user-name"></span>!</p>
+                <div id="view-profile-btn"><i class="fa-solid fa-circle-user"></i></div>
+                
+                
+              </div>
+        </nav>
+    </header>
+    <section class="about-sec about-sec-1">
+        <div id="about-img" class="about-div">
+            <img src="about.jpg" width="100%" id="img-1">
+        </div>
+        <div class="about-text about-div">
+            <h2>About Us</h2>
+            <p>SureCure is a comprehensive digital healthcare platform designed to empower people with safe, accessible, and reliable medical support right from their devices. In a world where health misinformation and counterfeit medicines are on the rise, we set out to build a platform that bridges the gap between technology and trustworthy healthcare. From online consultations and appointment bookings to real-time medicine verification and expert-backed home remedies, MediCheck brings essential health services together in one easy-to-use platform — all with your well-being at the heart of it.</p>
+            <button id="learn-more">
+                Learn More
+            </button>
+            
+        </div>
+    </section>
+    <section class="about-sec about-sec-2 display-none">
+        <div class="about-text about-div">
+            <h2>Our vision</h2>
+            <p>At SureCure, our vision is to redefine the way people experience healthcare — by creating a seamless, tech-enabled environment where trust, accessibility, and safety are at the core of every interaction.
+
+                In today's world, people often face a variety of healthcare challenges — from unreliable information and counterfeit medications to limited access to doctors and long appointment wait times. We aim to eliminate these barriers by building a comprehensive digital platform that empowers individuals to take charge of their health with clarity and confidence.</p>
+           
+        </div>
+        <div id="about-img" class="about-div">
+            <img src="goal.jpg" id="img-1" width="100%">
+        </div>
+            
+        </div>
+    </section>
+
+    <section class="about-sec about-sec-2 display-none">
+        <div id="about-img" class="about-div team-div">
+            <img src="team2.jpg" id="team-img" width="100%" >
+        </div>
+        <div class="about-text about-div">
+            <h2>Our team</h2>
+            <p>At SureCure, our team is a blend of medical professionals, tech innovators, designers, and health advocates — united by one shared mission: to make healthcare smarter, safer, and more accessible for everyone.
+
+                Each member brings a unique perspective, whether it’s clinical expertise, thoughtful design, or secure technology. Together, we’re not just building a platform — we’re building trust, impact, and better health for all.</p>
+                <a href="index.html#our-doctor">
+                    <button id="meet-our-team" >
+                    Meet Our team <b><b>&RightArrow;</b></b>
+                 </button></a>
+                 <button id="display-less" >
+                    Display less 
+                 </button></a>
+            
+        </div>
+       
+    </section>
+
+
+    
+    <footer class="footer">
+        <div class="foot-left">
+            <div class="foot-l-head"><img width="50" src="logo.png" alt="">Sure Cure</div>
+            <div class="foot-l-content">Copyright &copy; 2025 developed by Web Crafters all rights reserved.</div>
+            <div class="foot-l-links">
+                <a target="_blank" href="https://www.google.com"><i class="fa-brands fa-linkedin"></i></a>
+                <a target="_blank" href=""> <i class="fa-brands fa-x-twitter"></i></a>
+                <a target="_blank" href=""> <i class="fa-brands fa-github"></i></a>
+                <a target="_blank" href=""> <i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="foot-right">
+            <div class="foot-r-quick">
+                <div>Quick Links:</div>
+                <div><a href="#">Home</a></div>
+                <div><a href="#">About Us</a></div>
+                <div><a href="#">Find A Doctor</a></div>
+
+            </div>
+            <div class="foot-r-want-to">
+                <div>I want to:</div>
+                <div><a href="#">Home Remedy</a></div>
+                <div><a href="#">Online Medicine</a></div>
+                <div><a href="#">Medicine Verification</a></div>
+
+            </div>
+            <div class="foot-r-quick">
+                <div>Support</div>
+                <div><a href="#">Organ Donation</a></div>
+                <div><a href="#">Contact Us</a></div>
+                <div><a href="#">+91-1234-5678-90</a></div>
+            </div>
+        </div>
+
+    </footer>
+   
+    <script>
+        let about_sec = document.querySelectorAll('.about-sec-2');
+let learn_more = document.querySelector('#learn-more');
+let display_less=document.querySelector('#display-less')
+
+learn_more.addEventListener("click", () => {
+    if (about_sec[0].classList.contains('display-none')) {
+        about_sec.forEach((e) => {
+            e.classList.remove('display-none');
+           
+            
+
+        });
+        learn_more.classList.add('display-none');
+    }
+  
+   
+});
+display_less.addEventListener("click",function(){
+    about_sec.forEach((e) => {
+        e.classList.add('display-none');
+       
+        
+
+    });
+    learn_more.classList.remove('display-none');
+    
+});
+
+//index.html
+const links = document.querySelectorAll('.nav-links a');
+function setActiveLink() {
+  const currentPath = window.location.pathname;
+  const currentHash = window.location.hash;
+
+  links.forEach(link => {
+    link.classList.remove('active');
+
+    const href = link.getAttribute('href');
+
+   
+    if (href.startsWith('#')) {
+      if (href === currentHash) {
+        link.classList.add('active');
+      }
+    } 
+ 
+    else if (href === currentPath.split('/').pop()) {
+      link.classList.add('active');
+    }
+  });
+}
+setActiveLink();
+links.forEach(link => {
+  link.addEventListener('click', function () {
+    setTimeout(setActiveLink, 10); // slight delay for hash to update
+  });
+});
+
+
+
+
+//login
+
+document.addEventListener("DOMContentLoaded", () => {
+  const user = JSON.parse(localStorage.getItem("user"));
+  if (user && user.name) {
+    showProfile(user.name);
+  }
+
+  // Logout functionality
+  const logoutBtn = document.getElementById("logout-btn");
+  if (logoutBtn) {
+    logoutBtn.addEventListener("click", () => {
+      localStorage.removeItem("user");
+
+      const authButtons = document.getElementById("auth-buttons");
+      const userProfile = document.getElementById("user-profile");
+
+      if (authButtons && userProfile) {
+        authButtons.style.display = "flex";
+        userProfile.style.display = "none";
+      }
+
+      alert("You have been logged out.");
+    });
+  }
+
+  function showProfile(name) {
+    const authButtons = document.getElementById("auth-buttons");
+    const userProfile = document.getElementById("user-profile");
+    const userNameDisplay = document.getElementById("user-name");
+
+    if (authButtons && userProfile && userNameDisplay) {
+      authButtons.style.display = "none";
+      userProfile.style.display = "flex";
+      userNameDisplay.textContent = name;
+
+      // Optional styling
+      userProfile.style.gap = "20px";
+      userProfile.style.alignItems = "center";
+    }
+
+    // Dynamically add logout button if not already present
+    if (!document.getElementById("logout-btn")) {
+      const logoutBtn = document.createElement("button");
+      logoutBtn.id = "logout-btn";
+      logoutBtn.textContent = "Logout";
+      logoutBtn.style.marginLeft = "10px";
+      logoutBtn.onclick = () => {
+        localStorage.removeItem("user");
+        authButtons.style.display = "flex";
+        userProfile.style.display = "none";
+        alert("You have been logged out.");
+      };
+      userProfile.appendChild(logoutBtn);
+    }
+  }
+});
+
+
+
+
+
+
+
+
+
+
+    </script>
+     
+
+
+    
+</body>
+</html>
